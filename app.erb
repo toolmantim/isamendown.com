@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="<%= @down ? 'down' : 'up' %>">
+  <head>
+    <title>Is Amen Down?</title>
+    <style>
+      html {
+        background-color: #1d1d1d;
+        font: bold 96px/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
+        letter-spacing: -4px;
+        text-align: center;
+        padding-top: 35%;
+        text-rendering: optimizeLegibility;
+      }
+      html.down { color: #ff9100; }
+      html.up   { color: #dfff00; }
+
+      span.y      { letter-spacing: -15px; }
+      span.e      { letter-spacing: -2px; }
+      span.smiley { color: #894e04; }
+    </style>
+  </head>
+  <body>
+    <% if @down %>
+      <span class='y'>Y</span><span class='e'>e</span>s <span class='smiley'>:(</span>
+    <% else %>
+      Hell No!
+    <% end %>
+  </body>
+</html>
